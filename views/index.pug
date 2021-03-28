@@ -23,7 +23,7 @@ html(lang="en")
             }
 
     body
-        form.style-form(action="/services/form" method="POST")
+        form.style-form(action="/services/form" method="POST" enctype="multipart/form-data")
             .form-group.pad
                 input.form-control(type='text' name='name' placeholder='Default input')
                 .form-check.form-check-inline
