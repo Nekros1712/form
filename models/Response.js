@@ -7,7 +7,29 @@ const formSchema = new mongoose.Schema({
         minlength: 1,
         maxlength: 50
     },
-    radio: {
+    prn: {
+        type: String,
+        required: true,
+        minlength: 1,
+        maxlength: 10
+    },
+    email: {
+        type: String,
+        required: true,
+        minlength: 1,
+        maxlength: 75
+    },
+    college: {
+        type: String,
+        required: true,
+        minlength: 1,
+        maxlength: 100
+    },
+    branch: {
+        type: String,
+        required: true
+    },
+    year: {
         type: String,
         required: true
     },

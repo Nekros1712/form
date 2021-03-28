@@ -13,7 +13,7 @@ html(lang="en")
             }
             .style-form {
                 background: #e0e0e0;
-                height: 60vh;
+                height: 100vh;
                 display: flex;
                 flex-direction: column;
                 justify-content: center
@@ -25,13 +25,36 @@ html(lang="en")
     body
         form.style-form(action="/services/form" method="POST" enctype="multipart/form-data")
             .form-group.pad
-                input.form-control(type='text' name='name' placeholder='Default input')
+                input.form-control(type='text' name='name' placeholder='Name')
+                input.form-control(type='text' name='prn' placeholder='PRN/RollNo')
+                input.form-control(type='email' name='email' placeholder='E-Mail')
+                input.form-control(type='text' name='college' placeholder='College Name')
                 .form-check.form-check-inline
-                    input#inlineRadio1.form-check-input(type='radio' name='radio' value='option1')
+                    input#inlineRadio1.form-check-input(type='radio' name='branch' value='CE')
                     label.form-check-label(for='inlineRadio1') &nbsp;&nbsp;Comps
                 .form-check.form-check-inline
-                    input#inlineRadio1.form-check-input(type='radio' name='radio' value='option2')
+                    input#inlineRadio1.form-check-input(type='radio' name='branch' value='EXTC')
                     label.form-check-label(for='inlineRadio1') &nbsp;&nbsp;EXTC
+                .form-check.form-check-inline
+                    input#inlineRadio1.form-check-input(type='radio' name='branch' value='IT')
+                    label.form-check-label(for='inlineRadio1') &nbsp;&nbsp;IT
+                .form-check.form-check-inline
+                    input#inlineRadio1.form-check-input(type='radio' name='branch' value='Other')
+                    label.form-check-label(for='inlineRadio1') &nbsp;&nbsp;Other
+                br
+                br
+                .form-check.form-check-inline
+                    input#inlineRadio1.form-check-input(type='radio' name='year' value='FE')
+                    label.form-check-label(for='inlineRadio1') &nbsp;&nbsp;FE
+                .form-check.form-check-inline
+                    input#inlineRadio1.form-check-input(type='radio' name='year' value='SE')
+                    label.form-check-label(for='inlineRadio1') &nbsp;&nbsp;SE
+                .form-check.form-check-inline
+                    input#inlineRadio1.form-check-input(type='radio' name='year' value='TE')
+                    label.form-check-label(for='inlineRadio1') &nbsp;&nbsp;TE
+                .form-check.form-check-inline
+                    input#inlineRadio1.form-check-input(type='radio' name='year' value='BE')
+                    label.form-check-label(for='inlineRadio1') &nbsp;&nbsp;BE
                 | Example file input
                 input(type='file' name='upload')
                 input(type="submit", value="Submit")

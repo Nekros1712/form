@@ -18,7 +18,7 @@ const upload = multer({
 })
 
 router.post("/form", upload.single("upload"), async (req, res) => {
-  const { name, radio } = req.body
+  const { name, prn, email, college, branch, year } = req.body
   console.log(req.body)
   console.log(req.file)
 
@@ -27,11 +27,15 @@ router.post("/form", upload.single("upload"), async (req, res) => {
       console.log(url)
       const newResponse = new Response({
         name: name,
-        radio: radio,
+        prn: prn,
+        email: email,
+        college: college,
+        branch: branch,
+        year: year,
         imageUrl: url,
       })
       await newResponse.save()
-      res.redirect("/")
+      res.redirect("/services/form")
     })
     .catch((err) => {
       res.status(200).json({

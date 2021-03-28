@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 app.set('view engine','pug')
 
-const uri = "mongodb+srv://Samprit:samprit@cluster0.ziqcu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const uri = "mongodb+srv://Samprit:samprit@cluster0.ziqcu.mongodb.net/mySecondDatabase?retryWrites=true&w=majority";
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true},(err)=>{
     if(err) console.log(err)
     else console.log("Database Connected")
